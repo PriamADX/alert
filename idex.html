@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerte Virus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .alert {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .scan-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .scan-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        ⚠️ Windows a détecté un virus sur votre système !
+    </div>
+    <button class="scan-button" onclick="startScan()">Scannez</button>
+
+    <script>
+        function startScan() {
+            alert("Analyse en cours...");
+            setTimeout(() => {
+                window.location.href = "formulaire.html";
+            }, 3000); // Temps d'analyse en millisecondes
+        }
+    </script>
+</body>
+</html>
